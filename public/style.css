@@ -1,0 +1,39 @@
+:root {
+  --head-box-height: 60px;
+  --logo-font-size: 30px;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+#head-box {
+  height: var(--head-box-height);
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo-container {
+  width: calc(var(--logo-font-size) * 3.8);
+  display: flex;
+  justify-content: center;
+}
+
+#logo {
+  font-family: 'Caveat', cursive;
+  color: white;
+  font-size: var(--logo-font-size);
+}
+
+#menu-container {
+  width: var(--head-box-height);
+  display: flex;
+  justify-content: center;
+}
+
+#menu-icon {
+  width: 30px;
+}
