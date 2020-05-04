@@ -5,11 +5,19 @@
 
 body {
   font-family: 'Noto Sans JP', sans-serif;
+  /* height: 100vh; */
+  /* width: 100vw; */
+  margin: 0;
 }
 
 #head-box {
   height: var(--head-box-height);
-  background-color: black;
+  /* background-image: url('/images/grey.png'); */
+  /* background-image: url('/images/orange-pink.png'); */
+  /* background-image: url('/images/orange-purple.png'); */
+  background-image: url('/images/nature-hue.png');
+  /* background-image: url('/images/sand-sea.png'); */
+  background-size: 100% 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -36,4 +44,9 @@ body {
 
 #menu-icon {
   width: 30px;
+  height: 30px;
+}
+
+#place-holder-container {
+  width: var(--head-box-height);
 }
