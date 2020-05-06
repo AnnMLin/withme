@@ -1,12 +1,12 @@
 import React from 'react'
-import { Headbox, Classes } from './components'
+import { Headbox, AllClasses } from './components'
 
 const App = () => {
 
   return (
     <div id='app'>
       <Headbox />
-      <Classes />
+      <AllClasses />
     </div>
   )
 }

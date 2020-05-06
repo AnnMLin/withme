@@ -1,9 +1,6 @@
-import { combineReducers, createStore } from 'redux'
-import classes from './classes'
-
-const reducer = combineReducers({classes})
+import { createStore } from 'redux'
+import reducer from './reducers'
 
 const store = createStore(reducer)
 
 export default store
-export * from './classes'

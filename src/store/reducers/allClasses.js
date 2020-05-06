@@ -14,24 +14,21 @@ const initialState = {
   }
 } 
 
-// ACTION TYPES
-const ADD_CLASS = 'ADD_CLASS'
-const REMOVE_CLASS = 'REMOVE_CLASS'
-
-// ACTION CREATOR
-export const addClass = (classObj) => ({type: ADD_CLASS, classObj})
-export const removeClass = (classDate) => ({type: REMOVE_CLASS, classDate})
-
 // REDUCER
 const reducer = (state = initialState, action) => {
+  console.log('ACTION:',action)
   switch(action.type) {
-    case ADD_CLASS:
+    case 'DISPLAY_CLASSES_ON_SCHEDULE':
+      console.log('HERE!', state)
+      return state
+    case 'ADD_CLASS_TO_SCHEDULE':
       return {...state, ...action.classObj}
-    case REMOVE_CLASS:
+    case 'REMOVE_CLASS_FROM_SCHEDULE':
       const newState = {...state}
       delete newState[action.classDate] 
       return {...state, ...newState}
     default:
+      console.log('DEFAULT', state)
       return state
   }
 }
