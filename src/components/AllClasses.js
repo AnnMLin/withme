@@ -1,8 +1,11 @@
 import React, { useEffect } from 'react'
-import { connect, useSelector, useDispatch } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import allActions from '../store/actions'
+import db from '../firebase'
 
 const AllClasses = () => {
+  console.log('ENV:', process.env)
+  console.log('DB:', db)
   const allClasses = useSelector(state => state.allClasses)
   
   const dispatch = useDispatch()
