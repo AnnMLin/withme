@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Tier 1
 ## Public
-[ ] Public can view class schedule.
+[v] Public can view class schedule.
 [ ] Public can view class detail.
 
 ## Client
@@ -10,7 +10,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 [ ] Client can edit personal info.
 [ ] Client can log in.
 [ ] Client can log out.
-[ ] Client can view class schedule.
 [ ] Client can view class detail.
 [ ] Client can purchase class.
 [ ] Client can pay for class.
