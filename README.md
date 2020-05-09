@@ -1,24 +1,33 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 # Tier 1
-## Public
-[v] Public can view class schedule.
-[ ] Public can view class detail.
+## General (w/o log in)
+[v] Can view class schedule.
+[ ] Can view class detail.
 
-## Client
-[ ] Client can sign up.
+## General (auth)
+[ ] Can sign up.
+[ ] Can log in.
+[ ] Can log out.
+
+## General (after log in)
+[ ] Client can save personal info.
 [ ] Client can edit personal info.
-[ ] Client can log in.
-[ ] Client can log out.
-[ ] Client can view class detail.
-[ ] Client can purchase class.
+[ ] Client can book class.
 [ ] Client can pay for class.
 [ ] Client receives confirmation.
 
-## Admin (Teacher)
+## Admin (auth)
 [ ] Admin can log in.
 [ ] Admin can log out.
-[ ] Admin can add/delete class to schedule.
-[ ] Admin can see client info.
-[ ] Admin can see who signed up for class.
+
+## Admin (after log in)
+[ ] Admin can save admin info.
+[ ] Admin can edit admin info.
+[ ] Admin can add class to schedule.
+[ ] Admin can delete class from schedule.
+[ ] Admin can view who signed up for class.
+[ ] Admin can edit class detail.
+
+## Tier 2
 [ ] Admin can issue refund to client.
