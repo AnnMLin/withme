@@ -1,10 +1,13 @@
 :root {
   --head-box-height: 60px;
   --logo-font-size: 30px;
+  --general-font-size: 15px;
+  --btn-font-size: 13px;
 }
 
 body {
   font-family: 'Noto Sans JP', sans-serif;
+  font-size: var(--general-font-size);
   /* height: 100vh; */
   /* width: 100vw; */
   margin: 0;
@@ -49,4 +52,61 @@ body {
 
 #place-holder-container {
   width: var(--head-box-height);
+}
+
+#canvas {
+  display: flex;
+  justify-content: center;
+}
+
+#content-box {
+  width: 40vw;
+  min-width: 300px;
+  /* border: solid 1px darksalmon; */
+  margin: 20px;
+}
+
+#classes {
+
+}
+
+.a-class-item {
+
+}
+
+.a-date {
+  background: rgb(245, 239, 239);
+  border-top: solid .5px black;
+  border-bottom: solid 1px black;
+  padding: 0.5em;
+}
+
+.a-class {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.5em;
+}
+
+.a-time {
+  width: 20%;
+}
+
+.a-name {
+  width: 60%;
+}
+
+.btn {
+  /* background: rgb(255,255,255,.73); */
+  padding: 0.2em 0.3em;
+  border: solid 0.5px;
+  border-radius: 3px;
+  height: 1.5em;
+  width: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-right: var(--content-padding); */
+  box-sizing: border-box;
+  font-size: var(--btn-font-size);
 }
