@@ -60,7 +60,7 @@ body {
 }
 
 #content-box {
-  width: 40vw;
+  width: 100vw;
   min-width: 300px;
   /* border: solid 1px darksalmon; */
   margin: 20px;
@@ -76,8 +76,8 @@ body {
 
 .a-date {
   background: rgb(245, 239, 239);
-  border-top: solid .5px black;
-  border-bottom: solid 1px black;
+  border-top: solid 1px white;
+  border-bottom: solid .5px grey;
   padding: 0.5em;
 }
 
@@ -94,6 +94,15 @@ body {
 
 .a-name {
   width: 60%;
+}
+
+.a-name:link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.a-name:visited {
+  color: inherit;
 }
 
 .btn {
