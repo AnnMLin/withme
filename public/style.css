@@ -1,11 +1,13 @@
 :root {
-  --head-box-height: 60px;
+  --head-box-height: 40px;
   --logo-font-size: 30px;
   --general-font-size: 15px;
   --btn-font-size: 13px;
+  --general-padding: 20px;
 }
 
 body {
+  background-color: rgb(250, 250, 250);
   font-family: 'Noto Sans JP', sans-serif;
   font-size: var(--general-font-size);
   /* height: 100vh; */
@@ -14,17 +16,19 @@ body {
 }
 
 #head-box {
+  background-color: white;
   height: var(--head-box-height);
   /* background-image: url('/images/grey.png'); */
   /* background-image: url('/images/orange-pink.png'); */
   /* background-image: url('/images/orange-purple.png'); */
-  background-image: url('/images/nature-hue.png');
+  /* background-image: url('/images/nature-hue.png'); */
   /* background-image: url('/images/sand-sea.png'); */
-  background-size: 100% 100%;
+  /* background-size: 100% 100%; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding: var(--general-padding);
 }
 
 #logo-container {
@@ -40,7 +44,7 @@ body {
 }
 
 #menu-container {
-  width: var(--head-box-height);
+  /* width: var(--head-box-height); */
   display: flex;
   justify-content: center;
 }
@@ -63,7 +67,7 @@ body {
   width: 100vw;
   min-width: 300px;
   /* border: solid 1px darksalmon; */
-  margin: 20px;
+  padding: var(--general-padding);
 }
 
 #classes {
@@ -71,12 +75,12 @@ body {
 }
 
 .a-class-item {
-
+  margin-bottom: 30px;
 }
 
 .a-date {
-  background: rgb(245, 239, 239);
-  border-top: solid 1px white;
+  /* background: rgb(245, 239, 239); */
+  /* border-top: solid 1px white; */
   border-bottom: solid .5px grey;
   padding: 0.5em;
 }

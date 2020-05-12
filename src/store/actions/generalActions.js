@@ -1,4 +1,4 @@
-import db from "../../firebase";
+import db from '../../firebase';
 
 //ACTION TYPES
 const DISPLAY_CLASSES_ON_SCHEDULE = 'DISPLAY_CLASSES_ON_SCHEDULE'
@@ -22,24 +22,49 @@ const DISPLAY_CLASSES_ON_SCHEDULE = 'DISPLAY_CLASSES_ON_SCHEDULE'
 export const displayClassesOnSchedule = (classes) => ({type: DISPLAY_CLASSES_ON_SCHEDULE, classes})
 
 //THUNK CREATOR
-export const getClasses = () => dispatch => {
-  db.collection('classes').get()
-  .then((snapshot) => {
-    const classes = {}
-    snapshot.forEach((doc) => {
-      classes[doc.id] = doc.data()
+export const getAllClasses = () => dispatch => {
+  db.collection('allClasses').get()
+  .then(snapshot => {
+    const allClasses = {}
+    snapshot.forEach(doc => {
+      const date = doc.data().time.slice(0, 10)
+      const classObj = doc.data()
+      classObj.id = doc.id
+      // console.log(classObj)
+      if(allClasses[date]){
+        allClasses[date].push(classObj)
+      }else{
+        allClasses[date] = [classObj]
+      }
     })
-    dispatch(displayClassesOnSchedule(classes))
+    console.log(allClasses)
+    dispatch(displayClassesOnSchedule(allClasses))
   })
-  .catch((err) => {
+  .catch(err => {
     console.log('Error getting documents', err)
   })
+}
+
+export const getClassesByInstructor = (instructor) => dispatch => {
+  db.collection('allClasses').where('teacher', '==', instructor).get()
+    .then(snapshot => {
+      const classes = {}
+      snapshot.forEach(doc => {
+        classes[doc.data().time] = doc.data()
+        classes[doc.data().time].id = doc.id
+      })
+      dispatch(displayClassesOnSchedule(classes))
+    })
+    .catch(err => {
+      console.log('Error getting documents', err)
+    })
 }
 
 
 const generalActions = {
   displayClassesOnSchedule,
-  getClasses
+  getAllClasses,
+  getClassesByInstructor
 }
 
 export default generalActions
