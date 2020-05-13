@@ -16,7 +16,7 @@ const AllClasses = () => {
   }, [])
 
   return (
-    <div id='classes'>
+    <div id='all-classes'>
       {allClasses ? 
       Object.keys(allClasses).map(d => {
         // Assuming date is adjusted to time zone

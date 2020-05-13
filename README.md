@@ -2,8 +2,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Tier 1
 ## General (w/o log in)
-[v] Can view class schedule.
-[ ] Can view class detail.
+[v] Can view All Classes.
+[ ] Can view Single Class.
 
 ## General (auth)
 [ ] Can sign up.
