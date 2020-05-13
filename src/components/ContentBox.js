@@ -1,5 +1,5 @@
 import React from 'react'
-import { AllClasses } from '../components'
+import { AllClasses, SingleClass } from '../components'
 import { Route } from 'react-router-dom'
 
 const ContentBox = () => {
@@ -9,7 +9,8 @@ const ContentBox = () => {
         <Route path='/'>
           <AllClasses />
         </Route>
-        <Route path='/:id'>
+        <Route path='/:classId'>
+          <SingleClass />
         </Route>
       </div>
     </div>
