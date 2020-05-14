@@ -123,3 +123,16 @@ body {
   box-sizing: border-box;
   font-size: var(--btn-font-size);
 }
+
+#single-class {
+  display: flex;
+  flex-direction: row;
+}
+
+#back-arrow-container {
+  width: 30px;
+}
+
+#back-arrow {
+  width:100%;
+}
