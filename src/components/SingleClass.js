@@ -22,10 +22,19 @@ const SingleClass = () => {
         </div>
       </Link>
       {singleClass.id === classId ?
-      <div>
-        <div>{singleClass.name}</div>
-        <div>{singleClass.teacher}</div>
-        <div>{singleClass.price}</div>
+      <div id='class-detail-container'>
+        <div>
+          <div id='class-instructor'>{singleClass.teacher}</div>
+          <div id='class-name'>{singleClass.name}</div>
+          <div>{singleClass.day}, {singleClass.month}/{singleClass.date}</div>
+          <div>{singleClass.hour}:{singleClass.minute} {singleClass.amOrPm} | {singleClass.length}min</div>
+        </div>
+        <div>
+          <div id='class-desc'>{singleClass.desc}</div>
+        </div>
+        <div>
+          <div id='class-price'>{singleClass.price}</div>
+        </div>
       </div> :
       'LOADING...' }
     </div>

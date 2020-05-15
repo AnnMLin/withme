@@ -19,13 +19,10 @@ const AllClasses = () => {
     <div id='all-classes'>
       {allClasses ? 
       Object.keys(allClasses).map(d => {
-        // Assuming date is adjusted to time zone
         const classDate = new Date(d)
-        // new Date() thinks input is UTC and turned local to 'local'
-        // using getUC methods to get that offset back
-        const month = getMonthInLetters(classDate.getUTCMonth())
-        const date = classDate.getUTCDate()
-        const day = getWeekDay(classDate.getUTCDay())
+        const month = getMonthInLetters(classDate.getMonth())
+        const date = classDate.getDate()
+        const day = getWeekDay(classDate.getDay())
         return(
           <div key={d} className='a-class-item'>
             <div className='a-date'>{`${day}, ${month}/${date}`}</div>

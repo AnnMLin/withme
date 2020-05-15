@@ -1,5 +1,5 @@
 import db from '../../firebase';
-import { allClassesObjCreator } from '../../helperFunctions'
+import { allClassesObjCreator, getWeekDay, getMonthInLetters, get2DigitsMinute, get12HourDisplay,  } from '../../helperFunctions'
 
 //ACTION TYPES
 const DISPLAY_CLASSES_ON_SCHEDULE = 'DISPLAY_CLASSES_ON_SCHEDULE'
@@ -16,8 +16,15 @@ export const getSingleClass = classId => dispatch => {
       if(!doc.exists){
         console.log('No such Document!')
       }else{
-        console.log('DOC:', doc.data())
         const singleClass = doc.data()
+        const time = new Date(singleClass.time)
+        singleClass.day = getWeekDay(time.getDay())
+        singleClass.month = getMonthInLetters(time.getMonth())
+        singleClass.date = time.getDate()
+        const {hour, amOrPm} = get12HourDisplay(time.getHours())
+        singleClass.hour = hour
+        singleClass.amOrPm = amOrPm
+        singleClass.minute = get2DigitsMinute(time.getMinutes())
         singleClass.id = doc.id
         dispatch(displaySingleClass(singleClass))
       }

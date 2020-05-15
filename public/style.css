@@ -131,8 +131,11 @@ body {
 
 #back-arrow-container {
   width: 30px;
+  height: calc(94vh - var(--head-box-height) - var(--general-padding) * 2);
+  display: flex;
 }
 
 #back-arrow {
   width:100%;
+  object-fit: contain;
 }
