@@ -45,6 +45,8 @@ export const getMonthInLetters = (num) => {
       return 'Nov'
     case 11:
       return 'Dec'
+    default:
+      return 'ERROR!'
   }
 }
 

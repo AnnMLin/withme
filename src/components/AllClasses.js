@@ -33,14 +33,20 @@ const AllClasses = () => {
                 return aDate - bDate
               })
               .map(classObj => {
-                const {id, name, time} = classObj
+                const {id, name, time, teacher} = classObj
                 const date = new Date(time)
                 const {hour, amOrPm} = get12HourDisplay(date.getHours())
                 const minute = get2DigitsMinute(date.getMinutes())
                 return(
                   <div key={classObj.id} className='a-class'>
                     <div className='a-time'>{`${hour}:${minute}${amOrPm}`}</div>
-                    <Link to={`/${id}`} className='a-name'>{name}</Link>
+                    <div className='a-name-container'>
+                      <div>{name}</div>
+                      <div className='a-teacher'>{teacher}</div>
+                      <Link to={`/${id}`} className='a-view-details-container'>
+                        <div className='a-view-details'>View details ></div>
+                      </Link>
+                    </div>
                     <div className='btn' type='sign-up'>BOOK</div>
                   </div>
                 )

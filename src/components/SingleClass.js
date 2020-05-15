@@ -5,14 +5,14 @@ import { useParams, Link } from 'react-router-dom'
 
 const SingleClass = () => {
   const { classId } = useParams()
-  const singleClass = useSelector(state => state.singleClass)
+  const {id, teacher, name, day, month, date, hour, minute, amOrPm, length, price, desc} = useSelector(state => state.singleClass)
   const dispatch = useDispatch()
 
   useEffect(() => {
     dispatch(allActions.generalActions.getSingleClass(classId))
   }, [])
 
-  console.log(singleClass)
+  // console.log(singleClass)
 
   return(
     <div id='single-class'>
@@ -21,20 +21,20 @@ const SingleClass = () => {
           <img id='back-arrow' src={process.env.PUBLIC_URL +  '/icons/arrow-thin.png'} alt=''/>
         </div>
       </Link>
-      {singleClass.id === classId ?
+      {id === classId ?
       <div id='class-detail-container'>
-        <div>
-          <div id='class-instructor'>{singleClass.teacher}</div>
-          <div id='class-name'>{singleClass.name}</div>
-          <div>{singleClass.day}, {singleClass.month}/{singleClass.date}</div>
-          <div>{singleClass.hour}:{singleClass.minute} {singleClass.amOrPm} | {singleClass.length}min</div>
+        <div id='class-header-container'>
+          <div id='class-instructor'>{teacher}</div>
+          <div id='class-name'>{name}</div>
+          <div id='class-date'>{day} | {month} {date} | {hour}:{minute} {amOrPm}</div>
+          <div id='class-time'>{length}min | ${price}</div>
         </div>
-        <div>
-          <div id='class-desc'>{singleClass.desc}</div>
+        <div id='class-desc-container'>
+          <div id='class-desc'>{desc}</div>
         </div>
-        <div>
-          <div id='class-price'>{singleClass.price}</div>
-        </div>
+        <Link to='/payment-method' id='book-container'>
+          <div className='btn' id='book'>BOOK</div>
+        </Link>
       </div> :
       'LOADING...' }
     </div>
