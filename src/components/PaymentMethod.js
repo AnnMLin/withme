@@ -5,7 +5,7 @@ const PaymentMethod = () => {
   return (
     <div id='payment-method'>
       <div id='options-container'>
-        <Link to='/pay-w-paypal' className='btn'>Pay with Paypal</Link>
+        <a className='btn' href='https://www.paypal.me/amlpoledancer' target='_blank'>Pay with Paypal</a>
         <Link to='/pay-w-venmo' className='btn'>Pay with Venmo</Link>
         <Link to='/pay-w-card' className='btn'>Pay with card</Link>
       </div>

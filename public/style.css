@@ -2,7 +2,10 @@
   --head-box-height: 40px;
   --logo-font-size: 30px;
   --general-font-size: 15px;
-  --btn-font-size: 13px;
+  --secondary-font-size: 13px;
+  --detail-font-size: 12px;
+  --title-font-size: 20px;
+  --btn-font-size: 12px;
   --general-padding: 20px;
   --half-general-padding: calc(var(--general-padding) / 2)
 }
@@ -102,6 +105,7 @@ a:visited {
   border-bottom: solid .5px grey;
   padding: calc(var(--general-font-size) / 2);
   margin-bottom: 5px;
+  font-size: var(--secondary-font-size);
 }
 
 .a-class {
@@ -114,6 +118,8 @@ a:visited {
 .a-time {
   width: 20%;
   min-width: 75px;
+  font-size: var(--detail-font-size);
+  margin-top: 4px;
 }
 
 .a-name-container {
@@ -124,13 +130,17 @@ a:visited {
 
 .a-teacher {
   font-family: 'Slabo 27px', serif; 
-  font-size: 12px;
+  font-size: var(--detail-font-size);
   color: grey;
 }
 
 .a-view-details {
-  font-size: 12px;
+  font-size: var(--detail-font-size);
   color: red;
+}
+
+.a-class-book {
+  margin-top: 4px;
 }
 
 .btn {
@@ -184,16 +194,16 @@ a:visited {
 
 #class-instructor {
   font-family: 'Slabo 27px', serif;
-  font-size: 13px;
+  font-size: var(--detail-font-size);
 }
 
 #class-name {
-  font-size: 30px;
+  font-size: var(--title-font-size);
   margin-left: -2px;
 }
 
 #class-date, #class-time {
-  font-size: 13px;
+  font-size: var(--detail-font-size);
 }
 
 #class-desc-container {
@@ -203,6 +213,7 @@ a:visited {
 #class-desc {
   height: 100%;
   overflow-y: scroll;
+  font-size: var(--detail-font-size);
 }
 
 #payment-method {

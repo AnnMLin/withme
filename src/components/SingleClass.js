@@ -32,9 +32,9 @@ const SingleClass = () => {
         <div id='class-desc-container'>
           <div id='class-desc'>{desc}</div>
         </div>
-        <Link to='/payment-method' id='book-container'>
-          <div className='btn' id='book'>BOOK</div>
-        </Link>
+        <div id='book-container'>
+          <Link to='/payment-method' className='btn' id='book'>BOOK</Link>
+        </div>
       </div> :
       'LOADING...' }
     </div>
