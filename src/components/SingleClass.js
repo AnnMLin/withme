@@ -33,7 +33,7 @@ const SingleClass = () => {
           <div id='class-desc'>{desc}</div>
         </div>
         <div id='book-container'>
-          <Link to='/payment-method' className='btn' id='book'>BOOK</Link>
+          <Link to='/stripe' className='btn' id='book'>BOOK</Link>
         </div>
       </div> :
       'LOADING...' }

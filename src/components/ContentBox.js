@@ -1,5 +1,5 @@
 import React from 'react'
-import { AllClasses, SingleClass, PaymentMethod } from '../components'
+import { AllClasses, SingleClass, PaymentMethod, Stripe } from '../components'
 import { Switch, Route } from 'react-router-dom'
 
 const ContentBox = () => {
@@ -8,6 +8,7 @@ const ContentBox = () => {
       <div id='content-box'>
       <Switch>
         <Route exact path='/' component={AllClasses} />
+        <Route exact path='/stripe' component={Stripe} />
         <Route exact path='/payment-method' component={PaymentMethod} />
         <Route path='/:classId' component={SingleClass} />
       </Switch>

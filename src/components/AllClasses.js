@@ -47,7 +47,7 @@ const AllClasses = () => {
                         <div className='a-view-details'>View details ></div>
                       </Link>
                     </div>
-                    <Link to='/payment-method' className='btn a-class-book' type='book'>BOOK</Link>
+                    <Link to='/stripe' className='btn a-class-book' type='book'>BOOK</Link>
                   </div>
                 )
               })}
