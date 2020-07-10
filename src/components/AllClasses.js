@@ -43,7 +43,7 @@ const AllClasses = () => {
                     <div className='a-name-container'>
                       <div>{name}</div>
                       <div className='a-teacher'>{teacher}</div>
-                      <Link to={`/${id}`} className='a-view-details-container'>
+                      <Link to={`/class/${id}`} className='a-view-details-container'>
                         <div className='a-view-details'>View details ></div>
                       </Link>
                     </div>
